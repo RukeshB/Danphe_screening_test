@@ -2,6 +2,7 @@
 # Given three numbers X, Y & Z. write a function/method that finds the greatest among the
 # numbers.
 
+# method that finds the greatest among the three numbers
 def find_greatest(num1, num2, num3)
   #   create array contaning there parameters as an element of array
   #   then find greatest number from array using max method
