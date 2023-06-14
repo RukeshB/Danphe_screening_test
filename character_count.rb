@@ -7,6 +7,8 @@
 
 # method to count the occurrence of each character in the string
 def character_count(string)
+  return unless string.instance_of?(String)
+
   char_array = string.chars
   unique_chars = char_array.uniq
   output = ''
