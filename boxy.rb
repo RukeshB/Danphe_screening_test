@@ -3,14 +3,16 @@
 # Example:
 # boxy(3)
 # Output:
-#  ▁ ▁ ▁ 
+#  ▁ ▁ ▁
 # ▁▁▁▁▁▁▁
 # |1|2|3|
 # ▔▔▔▔▔▔▔
-#  ▔ ▔ ▔ 
+#  ▔ ▔ ▔
 
 def boxy(n)
   result = ''
+  lower_block = "\u2581"
+  upper_block = "\u2594"
   upper_dash = ''
   lower_dash = ''
   upper_line = ''
@@ -20,20 +22,20 @@ def boxy(n)
       result += '|'
       upper_dash += ' '
       lower_dash += ' '
-      upper_line += "\u2581"
-      lower_line += "\u2594"
+      upper_line += lower_block
+      lower_line += upper_block
     end
     result += "#{index + 1}|"
-    if (index+1) < 10
-        upper_dash += "\u2581 "
-        lower_dash += "\u2594 "
-        upper_line += "\u2581\u2581"
-        lower_line += "\u2594\u2594"
-    elsif (index+1) >= 10
-        upper_dash += "\u2581\u2581 "
-        lower_dash += "\u2594\u2594 "
-        upper_line += "\u2581\u2581\u2581"
-        lower_line += "\u2594\u2594\u2594"
+    if (index + 1) < 10
+      upper_dash += "#{lower_block} "
+      lower_dash += "#{upper_block} "
+      upper_line += "#{lower_block}#{lower_block}"
+      lower_line += "#{upper_block}#{upper_block}"
+    elsif (index + 1) >= 10
+      upper_dash += "#{lower_block}#{lower_block} "
+      lower_dash += "#{upper_block}#{upper_block} "
+      upper_line += "#{lower_block}#{lower_block}#{lower_block}"
+      lower_line += "#{upper_block}#{upper_block}#{upper_block}"
     end
   end
   puts upper_dash
