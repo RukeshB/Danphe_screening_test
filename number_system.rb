@@ -84,7 +84,7 @@ def decimal_to_other(number, base)
   result.reverse
 end
 
-# add method that convert hex number to Alphabatic notation
+# method to convert hex number to respective Alphabatic notation
 def hex_alpha_notation(input)
   input = input.to_s
   conversions = {
