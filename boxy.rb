@@ -24,10 +24,17 @@ def boxy(n)
       lower_line += "\u2594"
     end
     result += "#{index + 1}|"
-    upper_dash += "\u2581 "
-    lower_dash += "\u2594 "
-    upper_line += "\u2581\u2581"
-    lower_line += "\u2594\u2594"
+    if (index+1) < 10
+        upper_dash += "\u2581 "
+        lower_dash += "\u2594 "
+        upper_line += "\u2581\u2581"
+        lower_line += "\u2594\u2594"
+    elsif (index+1) >= 10
+        upper_dash += "\u2581\u2581 "
+        lower_dash += "\u2594\u2594 "
+        upper_line += "\u2581\u2581\u2581"
+        lower_line += "\u2594\u2594\u2594"
+    end
   end
   puts upper_dash
   puts upper_line
@@ -36,4 +43,4 @@ def boxy(n)
   puts lower_dash
 end
 
-boxy(3)
+boxy(15)
