@@ -4,6 +4,8 @@
 
 # method that finds the greatest among the three numbers
 def find_greatest_number(num1, num2, num3)
+  return 'invalid' if num1.nil? || num2.nil? || num3.nil?
+
   if num1 >= num2 && num2 >= num3
     num1
   elsif num2 >= num3 && num2 >= num1
@@ -15,6 +17,8 @@ end
 
 # alternative
 def find_greatest(num1, num2, num3)
+  return 'invalid' if num1.nil? || num2.nil? || num3.nil?
+
   #   create array contaning there parameters as an element of array
   #   then find greatest number from array using max method
   [num1, num2, num3].max
