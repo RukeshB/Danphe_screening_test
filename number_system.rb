@@ -12,7 +12,19 @@
 def convert_number(number, from, to)
   return to_binary(number, 2) if from == 'decimal' && to == 'binary'
 
+  return to_decimal(number, 2) if from == 'binary' && to == 'decimal'
+
   'invalid'
+end
+
+# method to convert number into decimal
+def to_decimal(number, base)
+  numbers = number.to_s.reverse
+  result = 0
+  numbers.chars.each_with_index do |num, index|
+    result += num.to_i * (base**index)
+  end
+  result
 end
 
 # method to convert number into binary
@@ -30,4 +42,6 @@ def to_binary(number, base)
   result.reverse
 end
 
+# convert_number(42, 'decimal', 'octal')
 puts convert_number(12, 'decimal', 'binary')
+puts convert_number(1100, 'binary', 'decimal')
