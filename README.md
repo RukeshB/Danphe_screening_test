@@ -19,10 +19,9 @@ Note: You can ignore accounting <whitespace>.
 Example:
 boxy(3)
 Output:
- ▁ ▁ ▁
-▁▁▁▁▁▁▁
-|1|2|3|
-▔▔▔▔▔▔▔
- ▔ ▔ ▔
+![image](https://github.com/RukeshB/Danphe_screening_test/assets/31877424/83c024a4-3b64-42ca-b571-30bf1de605f9)
     - code: boxy.rb
-- Problem 6: google sheet link ( https://docs.google.com/spreadsheets/d/1-zw96yZAt9HTzKTb0gSz-aTQ2JRbwsJ1CaTuOjk_C1U/edit#gid=0 )
+- Problem 6: Model the following entity relation requirement.
+A system has many shops. A shop has many products, which can fall into one or many categories. The products can have different prices on different dates.
+The solution to this can be an ER diagram with crow-foot notation, or it can be a text file that lists relevant classes and has active record relation statements.
+    - google sheet link: https://docs.google.com/spreadsheets/d/1-zw96yZAt9HTzKTb0gSz-aTQ2JRbwsJ1CaTuOjk_C1U/edit#gid=0
